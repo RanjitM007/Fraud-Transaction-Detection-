@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Home</title>
+</head>
+  
+<body bgcolor=#80F>
+    <center>
+        <header>Fraud Transaction Detection</header>
+        <br><br><br>
+        <form method="POST", action="{{url_for('get_pred')}}">
+        <b>TRANSCTION_AMOUNT : <input type="text" name='data1' placeholder="*Required Fileds"><br><br>
+           TRANSCTION_TIME_SECONDS : <input type="text" name='data2' placeholder="*Required Fileds"><br><br>
+           TRANSCTION_TIME_DAYS	 : <input type="text" name='data3' placeholder="*Required Fileds"><br><br>
+           TX_FRAUD_SCENARIO     : <select name="data4" id="data4" required="required">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    </select></b><br><br>
+        <input type="submit" , value='Get Prediction' > 
+        </form>
+        <br><br><br><br><br>
+        <img src="\static\YpnCjKA.gif" alt="Machine Learning" width="151px">
+    <h6> <b> <span style="background-color:yellow">Note**: for TX_FRAUD_SCENARIO</span></b> <br> <br> <br> 
+        👉Please choose 1 for Any transaction whose amount is more than 220 respect to TX_FRAUD_SCENARIO</h6>
+    <h6> 👉 Please choose 2 for Any Random drawn respect to TX_FRAUD_SCENARIO</h6>
+    <h6> 👉 Please choose 3 for 3 customers is drawn at random respect to TRANSCTION_TIME_SECONDS</h6>
+
+    </center>
+
+    <footer><b><span style="color :red"> Ranjit Maity </span></b></footer>
+</body>
+</html>
